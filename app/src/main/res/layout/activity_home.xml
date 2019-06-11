@@ -5,15 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
+
     >
 
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="@color/colorAccent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="AyePets!"
+        app:titleMarginStart="40dp"
+        app:logo="@drawable/ic_back"
+        tools:ignore="MissingConstraints" />
 
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="394dp"
         android:layout_height="386dp"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="257dp" />
+        tools:layout_editor_absoluteY="257dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -21,20 +34,28 @@
         android:layout_height="180dp"
         tools:layout_editor_absoluteX="6dp"
         tools:layout_editor_absoluteY="68dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        tools:ignore="MissingConstraints" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="659dp"
-        android:layout_alignParentBottom="true"
+        android:layout_height="0dp"
+        android:addStatesFromChildren="false"
+        android:scrollbarSize="4dp"
+        android:verticalScrollbarPosition="defaultPosition"
+        android:visibility="visible"
+        app:elevation="8dp"
         app:itemBackground="@color/colorPrimary"
+        app:itemHorizontalTranslationEnabled="false"
+        app:itemIconSize="30dp"
         app:itemIconTint="@drawable/nav_item_color_state"
         app:itemTextColor="@drawable/nav_item_color_state"
-        app:menu="@menu/bottom_nav_main">
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_main"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
 
-    </android.support.design.widget.BottomNavigationView>
 
 </android.support.constraint.ConstraintLayout>
