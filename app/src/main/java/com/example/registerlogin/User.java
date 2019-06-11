@@ -12,6 +12,7 @@ public class User {
     public void setSessionExpiryDate (Date sessionExpiryDate){
         this.sessionExpiryDate = sessionExpiryDate;
     }
+    
     public String getUsername(){return  username;}
     public String getFullName() { return fullName;}
     public Date getSessionExpiryDate() {return sessionExpiryDate;}
