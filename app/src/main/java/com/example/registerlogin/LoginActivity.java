@@ -1,4 +1,4 @@
-package info.androidhive.firebase;
+package com.example.registerlogin;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -111,3 +111,4 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 }
+

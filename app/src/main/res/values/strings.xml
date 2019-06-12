@@ -1,16 +1,4 @@
 <resources>
-
-    <string name="username">Username</string>
-    <string name="password">Password</string>
-    <string name="sign_in">Sign In</string>
-    <string name="register">Register</string>
-    <string name="full_name">Full name</string>
-    <string name="confirm_password">Confirm Password</string>
-    <string name="already_having_account">Already Having an Account?</string>
-    <string name="log_in">Log In</string>
-    <string name="not_having_an_account">Not Having an Account?</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="logout">Logout</string>
     <string name="app_name">Firebase Auth</string>
     <string name="action_sign_in_short">Register</string>
     <string name="email">Email</string>

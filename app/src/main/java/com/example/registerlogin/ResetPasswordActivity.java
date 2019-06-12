@@ -1,4 +1,4 @@
-package info.androidhive.firebase;
+package com.example.registerlogin;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
