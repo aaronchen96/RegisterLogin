@@ -1,5 +1,7 @@
 package com.example.registerlogin;
 
+import android.accounts.Account;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -15,22 +17,26 @@ public class LocationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_search_pet:
-                        Toast.makeText(LocationActivity.this, "Action Add Clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent1 = new Intent(LocationActivity.this, HomeActivity.class);
+                        startActivity(intent1);
                         break;
                     case R.id.action_map:
-                        Toast.makeText(LocationActivity.this, "Action Add Clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent2 = new Intent(LocationActivity.this, LocationActivity.class);
+                        startActivity(intent2);
                         break;
                     case R.id.action_add:
-                        Toast.makeText(LocationActivity.this, "Action Add Clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent3 = new Intent(LocationActivity.this, ListPetActivity.class);
+                        startActivity(intent3);
                         break;
                     case R.id.action_profile:
-                        Toast.makeText(LocationActivity.this, "Action Add Clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent4 = new Intent(LocationActivity.this, AccountActivity.class);
+                        startActivity(intent4);
                         break;
                 }
                 return true;

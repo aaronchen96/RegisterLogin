@@ -37,22 +37,27 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_search_pet:
-                        Toast.makeText(HomeActivity.this, "Action Add Clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent1 = new Intent(HomeActivity.this, HomeActivity.class);
+                        startActivity(intent1);
                         break;
                     case R.id.action_map:
-                        Toast.makeText(HomeActivity.this, "Action Add Clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent2 = new Intent(HomeActivity.this, LocationActivity.class);
+                        startActivity(intent2);
                         break;
                     case R.id.action_add:
-                        Toast.makeText(HomeActivity.this, "Action Add Clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent3 = new Intent(HomeActivity.this, ListPetActivity.class);
+                        startActivity(intent3);
                         break;
                     case R.id.action_profile:
-                        Toast.makeText(HomeActivity.this, "Action Add Clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent4 = new Intent(HomeActivity.this, AccountActivity.class);
+                        startActivity(intent4);
                         break;
                 }
                 return true;
