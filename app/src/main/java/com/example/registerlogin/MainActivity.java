@@ -76,10 +76,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadDashboard() {
-        Intent i = new Intent(getApplicationContext(), DashboardActivity.class);
+        Intent i = new Intent(getApplicationContext(), HomeActivity.class);
         startActivity(i);
         finish();
     }
+
 
     private void displayLoader() {
         pDialog = new ProgressDialog(MainActivity.this);

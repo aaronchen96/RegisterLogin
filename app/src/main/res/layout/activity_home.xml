@@ -9,16 +9,39 @@
     >
 
     <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/toolbar"
         android:background="@color/colorAccent"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:logo="@drawable/ic_back"
         app:title="AyePets!"
         app:titleMarginStart="40dp"
-        app:logo="@drawable/ic_back"
+
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="-2dp"
         tools:ignore="MissingConstraints" />
 
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="252dp"
+        android:layout_height="58dp"
+        android:padding="20dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="80dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="77dp"
+        android:layout_height="46dp"
+        android:layout_margin="5dp"
+        android:background="#aaa"
+        android:text="Logout"
+        android:textColor="@android:color/white"
+        tools:layout_editor_absoluteX="318dp"
+        tools:layout_editor_absoluteY="629dp"
+        tools:ignore="MissingConstraints" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"

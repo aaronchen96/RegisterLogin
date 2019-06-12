@@ -38,14 +38,6 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="410dp"
-        android:layout_height="391dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="72dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="397dp"
@@ -54,6 +46,13 @@
         tools:layout_editor_absoluteX="6dp"
         tools:layout_editor_absoluteY="467dp" />
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="409dp"
+        android:layout_height="404dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="56dp"
+        tools:srcCompat="@tools:sample/avatars[2]" />
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="58dp"
@@ -68,10 +67,11 @@
         android:id="@+id/imageButton2"
         android:layout_width="57dp"
         android:layout_height="52dp"
-        app:srcCompat="@drawable/ic_chat"
         android:background="@drawable/round_button"
+        app:srcCompat="@drawable/ic_chat"
         tools:layout_editor_absoluteX="338dp"
         tools:layout_editor_absoluteY="414dp" />
+
 
 
 </android.support.constraint.ConstraintLayout>

@@ -6,7 +6,9 @@
         android:title="Back"
         android:id="@+id/action_back"
         android:icon="@drawable/ic_back"
-        app:showAsAction="always"/>
+        app:showAsAction="always"
+        />
+
 
     <item
         android:title="chat"
