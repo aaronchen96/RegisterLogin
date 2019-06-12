@@ -20,11 +20,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        session = new SessionHandler(getApplicationContext());
-        User user = session.getUserDetails();
-        TextView welcomeText = findViewById(R.id.welcomeText);
 
-        welcomeText.setText("welcome " + user.getFullName()+ ", your session will expire on" + user.getSessionExpiryDate());
         Button logoutBtn = findViewById(R.id.btnLogout);
 
         logoutBtn.setOnClickListener(new View.OnClickListener() {

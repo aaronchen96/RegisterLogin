@@ -42,7 +42,16 @@
         <activity android:name=".ListPetActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".LocationActivity" />
-        <activity android:name=".HomeActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".DashboardActivity" />
     </application>
 
