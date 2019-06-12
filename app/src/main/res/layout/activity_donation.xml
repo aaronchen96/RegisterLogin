@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LocationActivity">
-
+    tools:context=".DonationActivity">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -38,16 +37,36 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp" />
 
-    <ScrollView
-        android:layout_width="395dp"
-        android:layout_height="603dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="64dp">
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="379dp"
+        android:layout_height="371dp"
+        android:text="THANKS FOR DONATING"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="75dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="380dp"
+        android:layout_height="57dp"
+        android:text="Amount"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="461dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="380dp"
+        android:layout_height="57dp"
+        android:text="Payment Method"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="530dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="155dp"
+        android:layout_height="57dp"
+        android:text="COMPLETE"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="599dp" />
 
 </android.support.constraint.ConstraintLayout>

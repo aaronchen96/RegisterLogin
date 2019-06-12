@@ -12,7 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".LocationActivity"></activity>
+        <activity android:name=".AccountActivity"></activity>
+        <activity android:name=".DonationActivity" />
+        <activity android:name=".ListPetActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".LocationActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".DashboardActivity" />
         <activity

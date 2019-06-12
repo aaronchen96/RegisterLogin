@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LocationActivity">
-
+    tools:context=".ProfileActivity">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -38,16 +38,40 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp" />
 
-    <ScrollView
-        android:layout_width="395dp"
-        android:layout_height="603dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="64dp">
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="410dp"
+        android:layout_height="391dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="72dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="397dp"
+        android:layout_height="202dp"
+        android:text="User Information"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="467dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="58dp"
+        android:layout_height="52dp"
+        android:background="@drawable/round_button"
+        android:scaleType="center"
+        app:srcCompat="@drawable/ic_call"
+        tools:layout_editor_absoluteX="259dp"
+        tools:layout_editor_absoluteY="414dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="57dp"
+        android:layout_height="52dp"
+        app:srcCompat="@drawable/ic_chat"
+        android:background="@drawable/round_button"
+        tools:layout_editor_absoluteX="338dp"
+        tools:layout_editor_absoluteY="414dp" />
+
 
 </android.support.constraint.ConstraintLayout>
