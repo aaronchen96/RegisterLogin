@@ -1,103 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AccountActivity">
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="374dp"
-        android:layout_height="37dp"
-        android:text="LIKES"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="436dp" />
-
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/toolbar"
-        android:background="@color/colorAccent"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="AyePets!"
-        app:titleMarginStart="40dp"
-        app:logo="@drawable/ic_back"
-        tools:ignore="MissingConstraints" />
-
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:addStatesFromChildren="false"
-        android:scrollbarSize="4dp"
-        android:verticalScrollbarPosition="defaultPosition"
-        android:visibility="visible"
-        app:elevation="8dp"
-        app:itemBackground="@color/colorPrimary"
-        app:itemHorizontalTranslationEnabled="false"
-        app:itemIconSize="30dp"
-        app:itemIconTint="@drawable/nav_item_color_state"
-        app:itemTextColor="@drawable/nav_item_color_state"
-        app:labelVisibilityMode="labeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_nav_main"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="90dp"
-        tools:srcCompat="@tools:sample/avatars[11]"
-        />
+    android:background="@android:color/holo_red_light">
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="188dp"
-        android:layout_height="35dp"
-        android:text="USERNAME"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="108dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Fragment"
+        android:textSize="30sp"
+        android:layout_centerInParent="true"/>
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="392dp"
-        android:layout_height="196dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="226dp" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="374dp"
-        android:layout_height="37dp"
-        android:text="RECENT VIEWS"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="473dp" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="374dp"
-        android:layout_height="37dp"
-        android:text="LOGOUT"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="605dp" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="374dp"
-        android:layout_height="37dp"
-        android:text="REFER A FRIEND"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="510dp" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="374dp"
-        android:layout_height="37dp"
-        android:text="ACCOUNT SETTINGS"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="568dp" />
-
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

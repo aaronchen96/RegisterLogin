@@ -3,6 +3,7 @@ package com.example.registerlogin;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,8 +14,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
 
+
 public class HomeActivity extends AppCompatActivity {
-    private SessionHandler session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +27,6 @@ public class HomeActivity extends AppCompatActivity {
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                session.logoutUser();
                 Intent i = new Intent(HomeActivity.this, LoginActivity.class);
                 startActivity(i);
                 finish();
@@ -35,37 +35,43 @@ public class HomeActivity extends AppCompatActivity {
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.action_search_pet:
-                        Intent intent1 = new Intent(HomeActivity.this, HomeActivity.class);
-                        startActivity(intent1);
-                        break;
-                    case R.id.action_map:
-                        Intent intent2 = new Intent(HomeActivity.this, LocationActivity.class);
-                        startActivity(intent2);
-                        break;
-                    case R.id.action_add:
-                        Intent intent3 = new Intent(HomeActivity.this, ListPetActivity.class);
-                        startActivity(intent3);
-                        break;
-                    case R.id.action_profile:
-                        Intent intent4 = new Intent(HomeActivity.this, AccountActivity.class);
-                        startActivity(intent4);
-                        break;
-                }
-                return true;
-            }
-        });
+        bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new Home()).commit();
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
     }
 
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    Fragment selectedFragment = null;
 
+                    switch (item.getItemId()){
+                        case R.id.action_search_pet:
+                            selectedFragment = new Home();
+                            break;
+
+                            case R.id.action_map:
+                                selectedFragment = new LocationActivity();
+                                break;
+
+                                case R.id.action_add:
+                        selectedFragment = new ListPetActivity();
+                        break;
+                         case R.id.action_profile:
+                        selectedFragment = new AccountActivity();
+                        break;
+                    }
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                            selectedFragment).commit();
+
+                    return true;
+                }
+            };
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.action_bar, menu);

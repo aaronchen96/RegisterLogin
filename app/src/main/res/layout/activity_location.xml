@@ -1,53 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LocationActivity">
+    android:background="@android:color/holo_green_light">
 
-
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/toolbar2"
-        android:background="@color/colorAccent"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="AyePets!"
-        app:titleMarginStart="40dp"
-        app:logo="@drawable/ic_back"
-        tools:ignore="MissingConstraints" />
+        android:text="Location Fragment"
+        android:textSize="30sp"
+        android:layout_centerInParent="true"/>
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:addStatesFromChildren="false"
-        android:scrollbarSize="4dp"
-        android:verticalScrollbarPosition="defaultPosition"
-        android:visibility="visible"
-        app:elevation="8dp"
-        app:itemBackground="@color/colorPrimary"
-        app:itemHorizontalTranslationEnabled="false"
-        app:itemIconSize="30dp"
-        app:itemIconTint="@drawable/nav_item_color_state"
-        app:itemTextColor="@drawable/nav_item_color_state"
-        app:labelVisibilityMode="labeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_nav_main"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp" />
-
-    <ScrollView
-        android:layout_width="395dp"
-        android:layout_height="603dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="64dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
-
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
