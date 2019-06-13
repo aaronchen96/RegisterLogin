@@ -37,11 +37,20 @@
             android:label="@string/title_activity_reset_password"
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
-        <activity android:name=".AccountActivity" />
+        <activity android:name=".AccountActivity"
+            android:label="User Account"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity android:name=".DonationActivity" />
-        <activity android:name=".ListPetActivity" />
+        <activity android:name=".ListPetActivity"
+            android:label="Pet Listing"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".LocationActivity" />
+
+        <activity android:name=".LocationActivity"
+            android:label="Location Map"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".HomeActivity"
             android:theme="@style/AppTheme.NoActionBar">
